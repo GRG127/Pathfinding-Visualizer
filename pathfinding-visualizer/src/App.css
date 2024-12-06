@@ -1,0 +1,117 @@
+
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff9a8b, #ff6a88, #ff3e6c);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  font-family: 'Lobster', cursive;
+  margin-bottom: 20px;
+}
+
+
+.controls {
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #ffcbf2;
+  border: 2px solid #ff6a88;
+  color: #ff6a88;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #ff6a88;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 5px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ff6a88;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  background-color: #ffcbf2;
+  transform: scale(1.1);
+}
+
+
+.cell.start {
+  background-color: #6aff92;
+}
+
+.cell.end {
+  background-color: #ffb3d9; 
+}
+
+
+.cell.wall {
+  background-color: #ff6a88;
+  transform: scale(0.9);
+}
+
+
+.cell.path {
+  background-color: #ffeb3b; 
+  transform: scale(1.1);
+}
+
+
+.success-message {
+  font-size: 1.5rem;
+  color: #ffeb3b;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: bounce 1s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
